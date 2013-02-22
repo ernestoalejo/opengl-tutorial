@@ -3,8 +3,8 @@ import os
 
 
 srcs = '''
-  utils.cc
-  main.cc
+  lesson01/utils.cc
+  lesson01/main.cc
 '''
 
 flags = ['-g', '-Werror']

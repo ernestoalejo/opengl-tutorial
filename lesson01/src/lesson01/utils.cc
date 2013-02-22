@@ -12,11 +12,10 @@ bool initGL() {
 
   glClearColor(0.f, 0.f, 0.f, 1.f);
 
-  GLenum error = glGetError();
-  if (error != GL_NO_ERROR) {
-    printf("init error: %s\n", gluErrorString(error));
-    return false;
-  }
+  checkGL("init failed");
 
   return true;
+
+error:
+  return false;
 }

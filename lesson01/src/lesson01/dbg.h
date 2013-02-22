@@ -54,4 +54,13 @@
     goto error; \
   }
 
+
+#define checkGL(M, ...) {\
+    GLenum err = glGetError(); \
+    if (err != GL_NO_ERROR) { \
+      log_err(M": %s", ##__VA_ARGS__, gluErrorString(err)); \
+      goto error; \
+    } \
+  }
+
 #endif  // DBG_H_

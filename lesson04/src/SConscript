@@ -1,0 +1,16 @@
+
+import os
+
+
+appname = 'lesson04'
+srcs = '''
+  lesson04/utils.cc
+  lesson04/main.cc
+'''
+
+flags = ['-g', '-Werror']
+libs = ['GL', 'GLU', 'glut']
+
+
+Program(os.path.join('..', 'bin', appname), Split(srcs), CPPPATH=['.'],
+    LIBS=libs, CPPFLAGS=flags)

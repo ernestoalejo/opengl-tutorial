@@ -50,8 +50,8 @@ bool Texture::loadFromFile(const std::string path) {
   if (success != IL_TRUE)
     return false;
 
-  bool r = loadFromPixels((GLuint*) ilGetData(), ilGetInteger(IL_IMAGE_WIDTH),
-      ilGetInteger(IL_IMAGE_HEIGHT));
+  bool r = loadFromPixels(reinterpret_cast<GLuint*>(ilGetData()),
+      ilGetInteger(IL_IMAGE_WIDTH), ilGetInteger(IL_IMAGE_HEIGHT));
   if (!r)
     return false;
 

@@ -1,0 +1,17 @@
+
+import os
+
+
+appname = 'lesson07'
+srcs = '''
+  lesson07/main.cc
+  lesson07/texture.cc
+  lesson07/utils.cc
+'''
+
+flags = ['-g', '-Werror']
+libs = ['GL', 'GLU', 'glut', 'IL', 'ILU']
+
+
+Program(os.path.join('..', 'bin', appname), Split(srcs), CPPPATH=['.'],
+    LIBS=libs, CPPFLAGS=flags)

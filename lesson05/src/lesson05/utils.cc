@@ -44,7 +44,7 @@ void render() {
   GLfloat x = (SCREEN_WIDTH - gBoard.width())/2.f;
   GLfloat y = (SCREEN_HEIGHT - gBoard.height())/2.f;
   gBoard.render(x, y);
-  
+
   glutSwapBuffers();
 }
 
@@ -56,7 +56,6 @@ bool loadMedia() {
 
   GLuint board[COUNT];
   for (int i = 0; i < COUNT; i++) {
-    //GLubyte* color = (GLubyte*) &board[i];
     if (i/128&16 ^ i%128&16) {
       board[i] = 0xffffffff;
     } else {

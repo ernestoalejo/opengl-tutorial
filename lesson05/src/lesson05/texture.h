@@ -3,8 +3,8 @@
 #define TEXTURE_H_
 
 
-#include "opengl.h"
-#include "common.h"
+#include "lesson05/opengl.h"
+#include "lesson05/common.h"
 
 
 class Texture {

@@ -1,6 +1,6 @@
 
-#include "dbg.h"
-#include "texture.h"
+#include "lesson05/dbg.h"
+#include "lesson05/texture.h"
 
 
 Texture::Texture()
